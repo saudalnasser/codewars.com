@@ -1,6 +1,7 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "es2022": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -8,7 +9,8 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint"],
-  "extends": ["standard", "prettier"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "overrides": [],
   "rules": {
     "no-unused-vars": "off",
     "no-use-before-define": "off",
@@ -16,20 +18,6 @@
       "error",
       {
         "argsIgnorePattern": "^_"
-      }
-    ],
-    "@typescript-eslint/explicit-member-accessibility": "error",
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        "allowTypedFunctionExpressions": true
-      }
-    ],
-    "@typescript-eslint/typedef": [
-      "error",
-      {
-        "memberVariableDeclaration": true,
-        "propertyDeclaration": true
       }
     ]
   }
